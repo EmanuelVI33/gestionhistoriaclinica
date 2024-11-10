@@ -13,7 +13,7 @@ public class TimeSlotCalculator {
      * @return La cantidad de cupos completos que caben en el rango de tiempo.
      * @throws IllegalArgumentException si los parámetros son inválidos.
      */
-    public static long calculateSlots(String startTimeString, String endTimeString, String slotDurationString) {
+    public static long calculateSlots(String startTimeString, String endTimeString, Integer slotMinutes) {
         LocalTime startTime = TimeParser.parseTime(startTimeString);
         LocalTime endTime = TimeParser.parseTime(endTimeString);
         Duration duration = Duration.between(startTime, endTime);
@@ -23,7 +23,7 @@ public class TimeSlotCalculator {
         }
 
         long totalMinutes = duration.toMinutes();
-        long slotMinutes = TimeParser.parseDurationToMinutes(slotDurationString);
+        // long slotMinutes = TimeParser.parseDurationToMinutes(slotDurationString);
 
         if (slotMinutes <= 0) {
             throw new IllegalArgumentException("La duración del cupo debe ser mayor a 0.");

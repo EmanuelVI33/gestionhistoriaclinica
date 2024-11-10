@@ -35,4 +35,9 @@ public class SpecialityJpaRepository implements ISpecialityRepository {
     public void delete(Long id) {
         specialityDao.deleteById(id);
     }
+
+    @Override
+    public Optional<Speciality> findByName(String name) {
+        return specialityDao.findByName(name);
+    }
 }

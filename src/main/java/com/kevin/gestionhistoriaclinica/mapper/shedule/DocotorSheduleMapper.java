@@ -19,7 +19,7 @@ public class DocotorSheduleMapper {
                 .dayOfWeek(dto.getDayOfWeek())
                 .startTime(TimeParser.parseTime(dto.getStartTime()))
                 .endTime(TimeParser.parseTime(dto.getEndTime()))
-                .slotDuration(TimeParser.parseTime(dto.getSlotDuration()))
+                .slotDuration(dto.getSlotDuration())
                 .totalSlots(totalSlots)
                 .status(dto.getStatus())
                 .doctor(doctor)
@@ -35,7 +35,7 @@ public class DocotorSheduleMapper {
         doctorShedule.setStartTime(TimeParser.parseTime(dto.getStartTime()));
         doctorShedule.setEndTime(TimeParser.parseTime(dto.getEndTime()));
         doctorShedule.setTotalSlots(totalSlots);
-        doctorShedule.setSlotDuration(TimeParser.parseTime(dto.getSlotDuration()));
+        doctorShedule.setSlotDuration(dto.getSlotDuration());
         doctorShedule.setStatus(dto.getStatus());
 
         // Relations

@@ -1,11 +1,8 @@
 package com.kevin.gestionhistoriaclinica.models.entities.shedule;
 
-import java.time.LocalDate;
 import java.time.LocalTime;
 
 import com.kevin.gestionhistoriaclinica.models.entities.user.Doctor;
-
-// import ch.qos.logback.core.util.Duration;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -43,7 +40,7 @@ public class DoctorShedule {
     private LocalTime endTime;
 
     @Column(name = "slot_duration")
-    private LocalTime slotDuration;
+    private Integer slotDuration;
 
     @Column(name = "total_slots")
     private Integer totalSlots;

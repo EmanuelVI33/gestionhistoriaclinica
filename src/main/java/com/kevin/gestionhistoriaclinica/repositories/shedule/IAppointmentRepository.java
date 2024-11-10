@@ -6,6 +6,7 @@ import java.util.Optional;
 import com.kevin.gestionhistoriaclinica.models.dto.shedule.AppointmentParams;
 import com.kevin.gestionhistoriaclinica.models.entities.shedule.Appointment;
 
+//Push
 public interface IAppointmentRepository {
     List<Appointment> findAll(AppointmentParams params);
 

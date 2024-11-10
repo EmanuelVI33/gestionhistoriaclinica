@@ -14,7 +14,7 @@ public class DoctorSheduleStoreDto {
     private Integer dayOfWeek;
     private String startTime;
     private String endTime;
-    private String slotDuration;
+    private Integer slotDuration;
     @Builder.Default
     private Boolean status = true;
 

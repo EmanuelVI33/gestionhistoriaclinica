@@ -10,6 +10,8 @@ public interface ISpecialityRepository {
 
     Optional<Speciality> findById(Long id);
 
+    Optional<Speciality> findByName(String name);
+
     Speciality save(Speciality speciality);
 
     void delete(Long id);
